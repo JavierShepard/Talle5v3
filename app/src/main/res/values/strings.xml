@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Talle5v2</string>
+    <string-array name="generos">
+        <item>Seleccione un género</item>
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>No binario</item>
+
+    </string-array>
+</resources>

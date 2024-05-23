@@ -31,7 +31,6 @@ public class RegistroActivity extends AppCompatActivity {
     Button b1;
     ImageView iv1;
     private static final int REQUEST_CAMERA_PERMISSION = 1;
-    Button btnRegistro,button2;
     TextView textUsuario, textPassword, textMail,textTelefono;
     Spinner spinnerGenero;
     byte[] byteArray;
@@ -45,9 +44,7 @@ public class RegistroActivity extends AppCompatActivity {
         textPassword = findViewById(R.id.TextoPassword);
         spinnerGenero = findViewById(R.id.spinnerGenero);
         textTelefono= findViewById(R.id.editTextNumTel);
-        /*textMail.setTextColor(Color.WHITE);
-        textUsuario.setTextColor(Color.WHITE);
-        textPassword.setTextColor(Color.WHITE);*/
+
         // creacion de la base de datos
         BaseDeDatos baseDeDatos = new BaseDeDatos(RegistroActivity.this);
         SQLiteDatabase sqLiteDatabase = baseDeDatos.getWritableDatabase();

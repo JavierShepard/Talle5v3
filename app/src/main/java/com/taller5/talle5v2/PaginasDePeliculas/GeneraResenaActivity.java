@@ -56,10 +56,6 @@ public class GeneraResenaActivity extends AppCompatActivity {
         puntuacion =findViewById(R.id.puntuacion);
         imagePeli = findViewById(R.id.imagePeli);
         puntuacion.setFilters(new InputFilter[]{ new InputFilterMinMax(1, 10)});
-        // Establecer el color del texto en tus EditText a blanco
-       /* puntuacion.setTextColor(Color.WHITE);
-        textPelicula.setTextColor(Color.WHITE);
-        textReseña.setTextColor(Color.WHITE);*/
 
         Button btnVolverListaResenas = findViewById(R.id.btnVolverListaResenas);
 

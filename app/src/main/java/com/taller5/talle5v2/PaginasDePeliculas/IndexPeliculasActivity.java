@@ -24,7 +24,6 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class IndexPeliculasActivity extends AppCompatActivity {
-    Button btnIndex;
     private static final String API_KEY = "fc658499";
     private static final String MOVIE_TITLE = "NOMBRE_DE_LA_PELICULA";
 

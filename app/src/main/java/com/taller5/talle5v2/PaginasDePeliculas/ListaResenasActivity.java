@@ -153,50 +153,5 @@ public class ListaResenasActivity extends AppCompatActivity {
         // Actualizar el adaptador del ListView
         listView.setAdapter(adapter);
     }
-    // Método para eliminar una reseña
-   /* private void eliminarReseña(String reseña) {
-        // Obtener el usuario actual
-        String usuario = getIntent().getStringExtra("usuario");
 
-        // Obtener la película y la reseña del texto seleccionado
-        String[] partes = reseña.split("\n");
-        String pelicula = partes[0].substring(partes[0].indexOf(":") + 2); // Obtener el texto después de ": "
-        String textoReseña = partes[1].substring(partes[1].indexOf(":") + 2); // Obtener el texto después de ": "
-
-        // Realizar la eliminación de la reseña en la base de datos
-        boolean eliminado = crudUsuarios.eliminarReseña(usuario, pelicula, textoReseña);
-
-        // Verificar si se eliminó correctamente y mostrar un mensaje
-        if (eliminado) {
-            Toast.makeText(this, "Reseña eliminada correctamente", Toast.LENGTH_SHORT).show();
-
-            // Actualizar la lista de reseñas después de eliminar
-            actualizarListaReseñas(usuario);
-        } else {
-            Toast.makeText(this, "Error al eliminar la reseña", Toast.LENGTH_SHORT).show();
-        }
-    }
-    private int obtenerPuntuacionDesdeReseña(String reseña) {
-        // Supongamos que la puntuación está entre corchetes [puntuacion]
-        int inicio = reseña.indexOf('[');
-        int fin = reseña.indexOf(']');
-        if (inicio != -1 && fin != -1 && fin > inicio) {
-            String puntuacionString = reseña.substring(inicio + 1, fin);
-            try {
-                return Integer.parseInt(puntuacionString.trim());
-            } catch (NumberFormatException e) {
-                e.printStackTrace();
-            }
-        }
-        return -1; // Si no se puede obtener la puntuación
-    }
-
-    private String obtenerTextoReseñaDesdeReseña(String reseña) {
-        // Supongamos que el texto de la reseña está después del primer corchete [puntuacion]
-        int fin = reseña.indexOf(']');
-        if (fin != -1) {
-            return reseña.substring(fin + 1).trim();
-        }
-        return ""; // Si no se puede obtener el texto de la reseña
-    }*/
 }

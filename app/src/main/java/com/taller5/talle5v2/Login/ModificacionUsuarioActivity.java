@@ -81,7 +81,6 @@ public class ModificacionUsuarioActivity extends AppCompatActivity {
         obtenerYEstablecerImagenUsuario(usuario);
         Button btnGuardarCambios = findViewById(R.id.btnGuardarCambios);
         Button btnVolverLogin = findViewById(R.id.buttonVolver);
-        //btnGuardarCambios.setOnClickListener(view -> guardarCambios());
         btnGuardarCambios.setOnClickListener(view -> guardarCambios());
 
         btnVolverLogin.setOnClickListener(new View.OnClickListener() {

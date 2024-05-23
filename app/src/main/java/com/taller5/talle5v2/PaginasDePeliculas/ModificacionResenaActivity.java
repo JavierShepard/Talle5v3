@@ -48,8 +48,6 @@ public class ModificacionResenaActivity extends AppCompatActivity {
         String peliculaResena = getIntent().getStringExtra("reseña");
         String pelicula2 = getIntent().getStringExtra("pelicula");
 
-
-
         // Buscar la última ocurrencia de ": " para dividir la cadena en película y reseña
         int lastIndex = peliculaResena.lastIndexOf("Reseña: ");
         if (lastIndex != -1) {

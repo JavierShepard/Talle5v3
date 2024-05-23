@@ -45,9 +45,12 @@ public class ModificacionUsuarioActivity extends AppCompatActivity {
         // Obtener los datos del Intent
         Intent intent = getIntent();
         String usuario = getIntent().getStringExtra("usuario");
-        String mail = getIntent().getStringExtra("mail");
+        String mail = intent.getStringExtra("mail");
         String password = intent.getStringExtra("password");
         String telefono = intent.getStringExtra("telefono");
+
+        // Agregar logs para depuración
+        System.out.println("Correo electrónico recibido: " + mail);
         b1 = (Button)findViewById(R.id.btn_capture_photo);
         iv1 = (ImageView)findViewById(R.id.imageView3);
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
@@ -64,9 +67,17 @@ public class ModificacionUsuarioActivity extends AppCompatActivity {
         });
 
         // Inicializar los campos con los valores recibidos
-        editTextEmail.setText(mail);
-        editTextPassword.setText(password);
-        editTextNumeroTel.setText(telefono);
+        if (mail != null && !mail.isEmpty()) {
+            editTextEmail.setText(mail);
+        } else {
+            System.out.println("El correo electrónico es nulo o vacío");
+        }
+        if (password != null) {
+            editTextPassword.setText(password);
+        }
+        if (telefono != null) {
+            editTextNumeroTel.setText(telefono);
+        }
         obtenerYEstablecerImagenUsuario(usuario);
         Button btnGuardarCambios = findViewById(R.id.btnGuardarCambios);
         Button btnVolverLogin = findViewById(R.id.buttonVolver);

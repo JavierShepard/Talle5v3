@@ -48,14 +48,15 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String mail, password,usuario;
-                mail = textUsuario.getText().toString();
+
                 password = textPassword.getText().toString();
                 usuario = textUsuario.getText().toString();
                 Toast.makeText(LoginActivity.this, "Prueba", Toast.LENGTH_LONG);
                 // Obtener el usuario_id del usuario
-                int id = crudUsuarios.getUsuarioId(mail);
 
-                if (crudUsuarios.isValidUser(mail, password)) {
+                mail = crudUsuarios.obtenerMailPorUsuario(usuario);
+                int id = crudUsuarios.getUsuarioId(mail);
+                if (crudUsuarios.isValidUser(usuario, password)) {
                     //Toast.makeText(LoginActivity.this,"Su ingreso es correcto",Toast.LENGTH_LONG);
                    // Intent llamarAIndex = new Intent(LoginActivity.this, IndexPeliculas.class);
                     Intent llamarAlistaReseña = new Intent(LoginActivity.this, ListaResenasActivity.class);

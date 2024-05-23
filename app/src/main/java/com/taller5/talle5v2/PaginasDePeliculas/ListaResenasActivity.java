@@ -97,12 +97,13 @@ public class ListaResenasActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ListaResenasActivity.this, ModificacionUsuarioActivity.class);
+
                 intent.putExtra("mail",mail);
                 intent.putExtra("password", getIntent().getStringExtra("password"));
                 intent.putExtra("usuario",getIntent().getStringExtra("usuario"));
                 intent.putExtra("telefono",telefono);
 
-                startActivity(intent); // Iniciar la actividad ModificacionUsuarioActivity
+                startActivityForResult(intent, 1);
             }
         });
     }

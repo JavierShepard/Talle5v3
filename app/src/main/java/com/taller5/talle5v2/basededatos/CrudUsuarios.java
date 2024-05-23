@@ -453,4 +453,35 @@ public class CrudUsuarios extends BaseDeDatos {
 
         return imagenResena;
     }
+    public String obtenerMailPorUsuario(String usuario) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String mail = null;
+
+        Cursor cursor = null;
+        try {
+            cursor = db.query(
+                    "usuarios", // Nombre de la tabla
+                    new String[]{"mail"}, // Columnas a consultar
+                    "usuario = ?", // Cláusula WHERE
+                    new String[]{usuario},
+                    null,
+                    null,
+                    null
+            );
+
+            if (cursor != null && cursor.moveToFirst()) {
+                mail = cursor.getString(cursor.getColumnIndexOrThrow("mail"));
+            }
+        } catch (Exception e) {
+            // Manejar la excepción según sea necesario
+            e.printStackTrace();
+        } finally {
+            if (cursor != null) {
+                cursor.close();
+            }
+            db.close();
+        }
+
+        return mail;
+    }
 }

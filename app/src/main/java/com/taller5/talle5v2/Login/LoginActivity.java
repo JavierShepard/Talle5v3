@@ -1,4 +1,4 @@
-package com.taller5.talle5v2;
+package com.taller5.talle5v2.Login;
 
 
 
@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.taller5.talle5v2.PaginasDePeliculas.ListaResenasActivity;
+import com.taller5.talle5v2.R;
 import com.taller5.talle5v2.basededatos.CrudUsuarios;
 
 public class LoginActivity extends AppCompatActivity {

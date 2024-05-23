@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.taller5.talle5v2.Adaptador.Adaptador;
-import com.taller5.talle5v2.IConectividad;
+import com.taller5.talle5v2.Adaptador.IConectividad;
 import com.taller5.talle5v2.R;
 import com.taller5.talle5v2.parseo.Movie;
 

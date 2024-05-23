@@ -7,7 +7,7 @@
 
     android:background="@drawable/fondo3"
 
-    tools:context=".LoginActivity">
+    tools:context=".Login.LoginActivity">
 
     <EditText
         android:id="@+id/textPassword"

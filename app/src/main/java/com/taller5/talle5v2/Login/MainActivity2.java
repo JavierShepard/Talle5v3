@@ -1,10 +1,12 @@
-package com.taller5.talle5v2;
+package com.taller5.talle5v2.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.taller5.talle5v2.R;
 
 public class MainActivity2 extends AppCompatActivity {
     private final long SPLASH_TIME_OUT = 3000;

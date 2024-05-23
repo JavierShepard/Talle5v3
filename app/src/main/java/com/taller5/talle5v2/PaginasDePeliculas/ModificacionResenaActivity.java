@@ -18,7 +18,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.taller5.talle5v2.ModificacionUsuarioActivity;
 import com.taller5.talle5v2.R;
 import com.taller5.talle5v2.basededatos.CrudUsuarios;
 

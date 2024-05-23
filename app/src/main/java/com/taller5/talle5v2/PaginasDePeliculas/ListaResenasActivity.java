@@ -19,8 +19,8 @@ import android.widget.Toast;
 import java.util.Arrays;
 import java.util.List;
 
-import com.taller5.talle5v2.LoginActivity;
-import com.taller5.talle5v2.ModificacionUsuarioActivity;
+import com.taller5.talle5v2.Login.LoginActivity;
+import com.taller5.talle5v2.Login.ModificacionUsuarioActivity;
 import com.taller5.talle5v2.R;
 import com.taller5.talle5v2.basededatos.CrudUsuarios;
 

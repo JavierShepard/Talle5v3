@@ -8,13 +8,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-import com.taller5.talle5v2.LoginActivity;
-import com.taller5.talle5v2.parseo.Reseña;
-
-import java.sql.SQLDataException;
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class CrudUsuarios extends BaseDeDatos {

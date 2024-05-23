@@ -1,4 +1,4 @@
-package com.taller5.talle5v2;
+package com.taller5.talle5v2.Adaptador;
 
 import com.taller5.talle5v2.parseo.Movie;
 

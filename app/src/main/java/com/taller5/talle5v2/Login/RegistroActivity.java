@@ -1,4 +1,4 @@
-package com.taller5.talle5v2;
+package com.taller5.talle5v2.Login;
 
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -21,15 +20,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.taller5.talle5v2.R;
 import com.taller5.talle5v2.basededatos.BaseDeDatos;
 import com.taller5.talle5v2.basededatos.CrudUsuarios;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
 
 public class RegistroActivity extends AppCompatActivity {
     //variables para guardar la foto de la camara

@@ -26,11 +26,11 @@
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
         <activity
-            android:name=".ModificacionUsuarioActivity"
+            android:name=".Login.ModificacionUsuarioActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
         <activity
-            android:name=".MainActivity2"
+            android:name=".Login.MainActivity2"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
@@ -52,11 +52,11 @@
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".RegistroActivity"
+            android:name=".Login.RegistroActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Login.LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
     </application>

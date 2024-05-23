@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
                         finishAffinity();
                     } else {
                         // Mostrar Snackbar con mensaje de error
-                        showSnackBar("Contraseña y/o usuario incorrecto. Intento " + intentosFallidos + "/3");
+                        Toast.makeText(LoginActivity.this, "Contraseña y/o usuario incorrecto. Intento"+ intentosFallidos + "/3", Toast.LENGTH_LONG).show();
 
                         // Limpiar los campos de entrada
                         textUsuario.setText("");

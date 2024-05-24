@@ -24,7 +24,8 @@
         <activity
             android:name=".PaginasDePeliculas.ModificacionResenaActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustNothing"/>
         <activity
             android:name=".Login.ModificacionUsuarioActivity"
             android:exported="true"

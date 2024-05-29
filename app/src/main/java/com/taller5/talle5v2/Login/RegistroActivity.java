@@ -20,6 +20,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.taller5.talle5v2.PaginasDePeliculas.ListaResenasActivity;
 import com.taller5.talle5v2.R;
 import com.taller5.talle5v2.basededatos.BaseDeDatos;
 import com.taller5.talle5v2.basededatos.CrudUsuarios;
@@ -119,8 +120,13 @@ public class RegistroActivity extends AppCompatActivity {
                         // Registro exitoso
                         Toast.makeText(RegistroActivity.this, "Registro exitoso", Toast.LENGTH_LONG).show();
                         // Generar la intención para ir a la pantalla de inicio de sesión
-                        Intent intent = new Intent(RegistroActivity.this, LoginActivity.class);
+                        Intent intent = new Intent(RegistroActivity.this, ListaResenasActivity.class);
+                        intent.putExtra("usuario", nombre);
+                        intent.putExtra("mail", usuario);
+                        intent.putExtra("password", contraseña);
+                        intent.putExtra("imagen", byteArray);
                         startActivity(intent);
+                        finish(); // Finalizar la actividad actual
                     } else {
                         // Error durante la inserción
                         Toast.makeText(RegistroActivity.this, "Error al registrar usuario", Toast.LENGTH_LONG).show();

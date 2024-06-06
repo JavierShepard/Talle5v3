@@ -7,6 +7,16 @@
     android:background="@drawable/listadop"
     tools:context=".PaginasDePeliculas.ModificacionResenaActivity">
 
+    <Button
+        android:id="@+id/btnMostrarUbicacion"
+        android:layout_width="107dp"
+        android:layout_height="54dp"
+        android:background="@drawable/grisclaro"
+        android:text="Mostrar Ubicación"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="659dp" />
 
     <EditText
         android:id="@+id/textViewResena"
@@ -117,8 +127,8 @@
 
     <Button
         android:id="@+id/btnEliminarResena"
-        android:layout_width="197dp"
-        android:layout_height="65dp"
+        android:layout_width="147dp"
+        android:layout_height="57dp"
         android:background="@drawable/grisclaro"
         android:text="Eliminar Reseña"
         android:textColor="#FFFFFF"
@@ -131,8 +141,8 @@
 
     <Button
         android:id="@+id/btnVolverLista"
-        android:layout_width="197dp"
-        android:layout_height="65dp"
+        android:layout_width="127dp"
+        android:layout_height="56dp"
         android:background="@drawable/grisclaro"
         android:text="Volver a Lista"
         android:textColor="#FFFFFF"

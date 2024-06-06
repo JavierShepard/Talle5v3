@@ -55,6 +55,7 @@ public class ListaResenasActivity extends AppCompatActivity {
         TextView textViewWelcomeMessage = findViewById(R.id.textViewWelcomeMessage);
         textViewWelcomeMessage.setText("Bienvenido, " + usuario);
         List<String> reseñas = crudUsuarios.obtenerReseñasPorUsuario(usuario);
+
         // Crear un adaptador personalizado para tu ListView
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.list_item_layout, reseñas);
         // Asignar el adaptador a tu ListView

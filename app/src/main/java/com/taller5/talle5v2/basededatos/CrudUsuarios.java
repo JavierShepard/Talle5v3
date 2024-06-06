@@ -484,4 +484,35 @@ public class CrudUsuarios extends BaseDeDatos {
 
         return mail;
     }
+    public String obtenerUbicacionPorId(int idResena) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String ubicacion = null;
+
+        Cursor cursor = null;
+        try {
+            cursor = db.query(
+                    "reseñas", // Nombre de la tabla
+                    new String[]{"ubicacion"}, // Columnas a consultar
+                    "id = ?", // Cláusula WHERE
+                    new String[]{String.valueOf(idResena)},
+                    null,
+                    null,
+                    null
+            );
+
+            if (cursor != null && cursor.moveToFirst()) {
+                ubicacion = cursor.getString(cursor.getColumnIndexOrThrow("ubicacion"));
+            }
+        } catch (Exception e) {
+            // Manejar la excepción según sea necesario
+            e.printStackTrace();
+        } finally {
+            if (cursor != null) {
+                cursor.close();
+            }
+            db.close();
+        }
+
+        return ubicacion;
+    }
 }

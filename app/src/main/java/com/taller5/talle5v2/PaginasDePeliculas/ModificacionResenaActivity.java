@@ -57,7 +57,9 @@ public class ModificacionResenaActivity extends AppCompatActivity {
             // Muestra la película y la reseña en los elementos correspondientes
             textViewPelicula.setText(pelicula);
             textViewReseña.setText(reseña);
+
         }
+        String ubicacion = crudUsuarios.obtenerUbicacionPorId(idResena);
         byte[] imagen = crudUsuarios.obtenerImagenResenaPorId(idResena);
         puntuacion= crudUsuarios.obtenerPuntuacionPorId(idResena);
         editTextPuntuacion.setText(String.valueOf(puntuacion));
@@ -68,6 +70,23 @@ public class ModificacionResenaActivity extends AppCompatActivity {
             // Si no se encuentra la imagen, puedes mostrar una imagen predeterminada o dejar el ImageView vacío
             iv1.setImageResource(R.drawable.login); // Cambia "imagen_predeterminada" por el ID de tu imagen predeterminada
         }
+        Button btnMostrarUbicacion = findViewById(R.id.btnMostrarUbicacion);
+        btnMostrarUbicacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Obtener la ubicación desde la base de datos o el intent
+                String ubicacion = crudUsuarios.obtenerUbicacionPorId(idResena);
+                if (ubicacion != null && !ubicacion.isEmpty()) {
+                    // Crear un intent para iniciar MostrarUbicacionActivity
+                    Intent intent = new Intent(ModificacionResenaActivity.this, MostrarUbicacionActivity.class);
+                    intent.putExtra("ubicacion", ubicacion);
+                    intent.putExtra("usuario", usuario);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(ModificacionResenaActivity.this, "Ubicación no disponible", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         // Botón para eliminar la reseña
         Button btnEliminarResena = findViewById(R.id.btnEliminarResena);
         btnEliminarResena.setOnClickListener(new View.OnClickListener() {
